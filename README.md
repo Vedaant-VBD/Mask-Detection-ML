@@ -17,15 +17,7 @@ This system uses Support Vector Machine (SVM) with Principal Component Analysis 
 - **Confidence Scores**: Probability-based predictions
 - **Easy Training**: Simple dataset training process
 
-## Project Structure
-MaskML/
-  ├── train.py # Model training and single image prediction 
-  ├── app.py # Real-time webcam detection 
-  ├── dataset/ # Training images organized by class 
-  │ ├── with_mask/ 
-  │ ├── without_mask/ 
-  │ └── mask_weared_incorrect/ 
-  └── mask_detector_model.pkl # Trained model (generated after training)
+<pre> ## 📁 Project Structure ``` MaskML/ ├── train.py # Model training and single image prediction ├── app.py # Real-time webcam detection ├── dataset/ # Training images organized by class │ ├── with_mask/ │ ├── without_mask/ │ └── mask_weared_incorrect/ ├── mask_detector_model.pkl # Trained model (generated after training) ├── requirements.txt └── .gitignore ``` </pre>
 
 
 ## 🛠️ Installation
