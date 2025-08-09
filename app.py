@@ -40,7 +40,12 @@ while True:
         predicted_class = label_encoder.inverse_transform(prediction)[0]
 
         label = f"{predicted_class} ({confidence*100:.1f}%)"
-        color = (0, 255, 0) if predicted_class == "mask" else (0, 0, 255)
+        if predicted_class == "mask":
+            color = (0, 255, 0)  # Green for with_mask
+        elif predicted_class == "no_mask":
+            color = (0, 0, 255)  # Red for without_mask
+        else:
+            color = (0, 255, 255)  # Yellow for mask_worn_incorrectly
         cv2.rectangle(frame, (x, y), (x+w, y+h), color, 2)
         cv2.putText(frame, label, (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.8, color, 2)
 
